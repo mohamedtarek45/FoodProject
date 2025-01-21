@@ -1,4 +1,3 @@
-import Order from '../../backend/src/models/order';
 
 export type User = {
   user: {
