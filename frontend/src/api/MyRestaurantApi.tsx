@@ -39,7 +39,7 @@ export const useCreateMyRestaurant = () => {
     nav("/");
   }
   if (isError) {
-    toast.error("ddfefef");
+    toast.error("there is error");
     reset(); //to clear state of error
   }
   return {
@@ -81,7 +81,7 @@ export const useGetMyRestaurant = () => {
   if (data?.message === "User doesn't have restaurant") {
     getRestaurant=undefined;
   } else if (isError) {
-    toast.error("qqwe");
+    toast.error("there is error");
   }
   return {
     getRestaurant,
@@ -122,7 +122,7 @@ export const useUpdateMyRestaurant = () => {
     toast.success("Update Restaurant Succefully");
   }
   if (isError) {
-    toast.error("bnbn");
+    toast.error("there is error");
     reset(); //to clear state of error
   }
   return {
@@ -161,7 +161,7 @@ export const useGetMyRestaurantOrders = () => {
     refetchInterval: 5000,
   });
   if (isError) {
-    toast.error("ooooo");
+    toast.error("there is error");
   }
   let RestaurantOrders:[]|Order[];
   if(!Array.isArray(data)){

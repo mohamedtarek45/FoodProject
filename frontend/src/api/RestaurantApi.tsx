@@ -38,7 +38,7 @@ export const useSearchRestaurants = (
     enabled: !!city,
   });
   if (isError) {
-    toast.error("7987");
+    toast.error("there is error");
   }
   return {
     results,
@@ -70,7 +70,7 @@ export const useGetRestaurantDetails = (restaurantId?: string) => {
   });
 
   if (isError) {
-    toast.error("101010");
+    toast.error("there is error");
   }
   return {
     restaurantDetails,

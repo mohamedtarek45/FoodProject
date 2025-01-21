@@ -52,7 +52,7 @@ export const useCreateCheckOutSession = () => {
     // error,
   } = useMutation({ mutationFn: createCheckOutSessionRequest });
   if (isError) {
-    toast.error("hhh");
+    toast.error("there is error");
     reset();
   }
   return {
@@ -85,7 +85,7 @@ export const useGetMyOrders = () => {
     // error,
   } = useQuery({ queryKey: [`orders`], queryFn: getMyOrders ,refetchInterval:3000});
   if (isError) {
-    toast.error("aaaaaaaa");
+    toast.error("there is error");
   }
   return { orders, isPending };
 };
