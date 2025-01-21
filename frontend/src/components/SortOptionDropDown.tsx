@@ -35,15 +35,13 @@ const SortOptionDropDown = ({ onChange, sortOption }: Props) => {
           {sortOption ? `Sort by: ${SORT_OPTIONS[index].label}` : "Sort by: "}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent>
+      <DropdownMenuContent className="z-40 ">
         {SORT_OPTIONS.map((option, index) => (
-          <DropdownMenuItem
-            key={index}
-            className="cursor-pointer text-sm p-1 hover:outline-none flex gap-2"
-            onClick={() => onChange(option.value)}
-          >
-            {sortOption === option.value && <Check />}
-            {option.label}
+          <DropdownMenuItem key={index} className="hover:outline-none" onClick={() => onChange(option.value)}>
+            <div className="cursor-pointer text-sm p-1 flex gap-2 bg-slate-100  px-12 py-3 lg:py-2 ">
+              {option.label}
+              {sortOption === option.value && <Check />}
+            </div>
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
