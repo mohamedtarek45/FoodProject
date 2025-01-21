@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "./src/index.ts",
   "scripts": {
+    "dev":"nodemon",
     "start": "nodemon src/index.ts",
     "build": "“rimraf dist && tsc”",
     "ts.check": "tsc — project tsconfig.json",
