@@ -25,10 +25,10 @@ export const useGetMyUser = (isAuthenticated?:boolean) => {
     data: currentUser,
     isError,
     isPending,
-    error,
+    // error,
   } = useQuery({ queryKey: [`User`], queryFn: getMyUserRequest ,enabled:isAuthenticated});
   if (isError) {
-    toast.error(error.toString());
+    toast.error("222");
   }
   return {
     currentUser,
@@ -109,7 +109,7 @@ export const useUpdateMyUser = () => {
     toast.success("user profile updated");
   }
   if (isError) {
-    toast.error(error.toString());
+    toast.error("88888");
     reset(); //to clear state of error
   }
   return {

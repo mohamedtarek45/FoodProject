@@ -31,7 +31,7 @@ export const useCreateMyRestaurant = () => {
     isPending,
     reset,
     isSuccess,
-    error,
+    // error,
   } = useMutation({ mutationFn: CreateMyRestaurant });
 
   if (isSuccess) {
@@ -39,7 +39,7 @@ export const useCreateMyRestaurant = () => {
     nav("/");
   }
   if (isError) {
-    toast.error(error.toString());
+    toast.error("ddfefef");
     reset(); //to clear state of error
   }
   return {
@@ -75,13 +75,13 @@ export const useGetMyRestaurant = () => {
     data,
     isError,
     isPending,
-    error,
+    // error,
   } = useQuery({ queryKey: ["Restaurant", key], queryFn: GetMyRestaurant });
   let getRestaurant=data;
   if (data?.message === "User doesn't have restaurant") {
     getRestaurant=undefined;
   } else if (isError) {
-    toast.error(error.toString());
+    toast.error("qqwe");
   }
   return {
     getRestaurant,
@@ -115,14 +115,14 @@ export const useUpdateMyRestaurant = () => {
     isPending,
     reset,
     isSuccess,
-    error,
+    // error,
   } = useMutation({ mutationFn: updateMyRestaurant });
 
   if (isSuccess) {
     toast.success("Update Restaurant Succefully");
   }
   if (isError) {
-    toast.error(error.toString());
+    toast.error("bnbn");
     reset(); //to clear state of error
   }
   return {
@@ -154,14 +154,14 @@ export const useGetMyRestaurantOrders = () => {
     data,
     isError,
     isPending,
-    error,
+    // error,
   } = useQuery({
     queryKey: ["Restaurant-Order", key],
     queryFn: getMyRestaurantOrders,
     refetchInterval: 5000,
   });
   if (isError) {
-    toast.error(error.toString());
+    toast.error("ooooo");
   }
   let RestaurantOrders:[]|Order[];
   if(!Array.isArray(data)){

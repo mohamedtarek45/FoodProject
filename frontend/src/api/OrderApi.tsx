@@ -82,10 +82,10 @@ export const useGetMyOrders = () => {
     data: orders,
     isError,
     isPending,
-    error,
+    // error,
   } = useQuery({ queryKey: [`orders`], queryFn: getMyOrders ,refetchInterval:3000});
   if (isError) {
-    toast.error(error.toString());
+    toast.error("aaaaaaaa");
   }
   return { orders, isPending };
 };

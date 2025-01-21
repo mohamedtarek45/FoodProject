@@ -31,14 +31,14 @@ export const useSearchRestaurants = (
 
     isPending,
 
-    error,
+    // error,
   } = useQuery({
     queryKey: [searchState, city],
     queryFn: createSearchRequest,
     enabled: !!city,
   });
   if (isError) {
-    toast.error(error.toString());
+    toast.error("7987");
   }
   return {
     results,
@@ -62,7 +62,7 @@ export const useGetRestaurantDetails = (restaurantId?: string) => {
     data: restaurantDetails,
     isError,
     isPending,
-    error,
+    // error,
   } = useQuery({
     queryKey: ["restaurant", restaurantId],
     queryFn: GetRestaurantDetails,
@@ -70,7 +70,7 @@ export const useGetRestaurantDetails = (restaurantId?: string) => {
   });
 
   if (isError) {
-    toast.error(error.toString());
+    toast.error("101010");
   }
   return {
     restaurantDetails,
