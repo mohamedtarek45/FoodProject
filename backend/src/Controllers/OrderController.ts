@@ -3,7 +3,9 @@ import Stripe from "stripe";
 import dotenv from "dotenv";
 import Resturant, { MenuItemType } from "../models/restaurant";
 import Order from "../models/order";
-dotenv.config({ path: "./.env" });
+if (process.env.NODE_ENV !== "production") {
+  dotenv.config({ path: "./.env" });
+}
 const stripe = new Stripe(process.env.STRIPE_API_KEY as string);
 const FRONTEND_URL = process.env.FRONTEND_URL as string;
 

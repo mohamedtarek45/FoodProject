@@ -7,7 +7,8 @@ import myUserRoute from "./routes/MyUserRoute";
 import myRestaurantRoute from "./routes/MyRestaurantRoute";
 import orderRoute from "./routes/OrderRoute";
 import RestaurantRoute from "./routes/RestaurantRoute";
-dotenv.config({ path: "./.env" });
+if (process.env.NODE_ENV !== "production") {
+dotenv.config({ path: "./.env" });}
 
 mongoose
   .connect(process.env.MONGODB_CONNECTION_STRING as string)
