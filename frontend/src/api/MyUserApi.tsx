@@ -27,7 +27,7 @@ export const useGetMyUser = (isAuthenticated?:boolean) => {
     isPending,
     // error,
   } = useQuery({ queryKey: [`User`], queryFn: getMyUserRequest ,enabled:isAuthenticated});
-  if (isError) {
+  if (isError&&isAuthenticated) {
     toast.error("222");
   }
   return {
