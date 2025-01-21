@@ -49,10 +49,10 @@ export const useCreateCheckOutSession = () => {
     isPending,
     isSuccess,
     reset,
-    error,
+    // error,
   } = useMutation({ mutationFn: createCheckOutSessionRequest });
   if (isError) {
-    toast.error(error.toString());
+    toast.error("hhh");
     reset();
   }
   return {
