@@ -20,7 +20,7 @@ export const searchRestaurant = async (
     query["city"] = new RegExp(city, "i");
     const cityCheck = await Resturant.countDocuments(query);
     if (cityCheck === 0) {
-      res.status(404).json({
+      res.status(200).json({
         data: [],
         pagination: {
           total: 0,
